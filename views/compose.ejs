@@ -1,0 +1,21 @@
+<%-include('partials/header');-%>
+<h1>
+    Compose your blog
+</h1>
+
+<form action="/" method="POST">
+    <label>Title</label>
+    <input name="title" type="text" placeholder="Enter Title" class="form-control"><br>
+    <label for="exampleFormControlTextarea1">Content</label><br>
+    <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Enter Content"></textarea><br>
+    <button type="submit" class="btn btn-primary">
+        Compose
+    </button>
+</form>
+
+
+
+
+<%-include('partials/footer'); -%>
+
+

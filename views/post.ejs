@@ -1,0 +1,22 @@
+<%-include('partials/header')-%>
+        <h1>
+            Post Archives
+        </h1>
+   
+    
+ <%contents.forEach(function(pair){%>
+   <h1>
+       <%=pair.topic%>
+   </h1>
+   <p>
+    <%=pair.content%>
+   </p>
+<% })%>
+
+
+
+
+
+
+
+<%-include('partials/footer')-%>

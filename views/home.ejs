@@ -1,0 +1,40 @@
+<%-include('partials/header')-%>
+        <h1>
+            HOME 
+        </h1>
+        <p>
+            <%=homeStartingContent%>
+        </p>
+    
+
+         <% for (var i=0;i<contents.length;i++){ %>
+             <h3>
+                <%=contents[i].topic%>
+
+             </h3>
+             <p>
+                <%=contents[i].content.substring(0,100)%>
+                <a href="/posts/<%=contents[i].topic%>"> Read more... </a>
+             </p>
+            
+                <%var options={weekday:'long',year:'numeric',month:'long',day:'numeric'}%>
+                <%var today=new Date()%>
+                <%var hour=today.getHours()%>
+                <%day=today.toLocaleDateString('en-US',options)%>
+
+               
+            <b>
+         
+            Created on - <%= day %>
+            </b>       
+            
+          <hr>
+
+         <%}%>
+
+
+
+
+
+
+<%-include('partials/footer')-%>
